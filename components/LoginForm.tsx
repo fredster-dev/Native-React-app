@@ -10,13 +10,16 @@ import {
 } from 'react-native';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase/firebaseconfig';
+// Import the router from expo-router
+import { useRouter } from 'expo-router';
 
 const LoginForm = () => {
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-  const [confirmPassword, setConfirmPassword] = useState<string>('');
-  const [isLogin, setIsLogin] = useState<boolean>(true);
-  const [error, setError] = useState<string>('');
+    const router = useRouter();
+    const [email, setEmail] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
+    const [confirmPassword, setConfirmPassword] = useState<string>('');
+    const [isLogin, setIsLogin] = useState<boolean>(true);
+    const [error, setError] = useState<string>('');
 
   const handleSubmit = async () => {
     if (!isLogin && password !== confirmPassword) {
@@ -30,6 +33,7 @@ const LoginForm = () => {
       } else {
         await createUserWithEmailAndPassword(auth, email, password);
       }
+        // Clear input fields and error message
       setError('');
     } catch (e) {
       console.error('Firebase auth error:', e);
