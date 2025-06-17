@@ -1,23 +1,25 @@
 import { Text, View, StyleSheet } from 'react-native';
-// In ProfilScreen.tsx
-import { auth } from '../../firebase/firebaseconfig'
+import { auth } from '../../firebase/firebaseconfig';
 import { signOut } from 'firebase/auth';
+import { useRouter } from 'expo-router';
 import { Button } from 'react-native';
 
 export default function ProfilScreen() {
+  const router = useRouter();
+
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      // RootLayout kommer då redirecta till login automatiskt
+      router.replace('/(auth)/login'); // Redirect to login after logout
     } catch (error) {
       console.error('Logout error:', error);
     }
   };
 
   return (
-    <View className="flex-1 items-center justify-center bg-red-500">
-      <Text className="text-white text-lg">Profil Screen 🎉</Text>
-      <Button title="Logga ut" onPress={handleLogout} />
+    <View style={styles.container}>
+      <Text style={styles.text}>Profile Screen 🎉</Text>
+      <Button title="Log Out" onPress={handleLogout} />
     </View>
   );
 }
@@ -25,9 +27,9 @@ export default function ProfilScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#25292e',
   },
   text: {
     color: '#fff',
