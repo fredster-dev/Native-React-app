@@ -1,5 +1,5 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { Platform, StyleSheet, ImageBackground } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -7,34 +7,44 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import TestComp from '@/components/Testcomp';
 import LoginForm from '@/components/LoginForm';
+import LinearGradient from 'react-native-linear-gradient';
+import { Text } from 'react-native';
 
 
 
 export default function HomeScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
+    <ImageBackground
+      source={require('../../assets/images/back.jpg')} // Byt ut till din egen bild
+      style={styles.background}
+      resizeMode="cover"
+    >
       <ThemedView style={styles.titleContainer}>
-{/*         <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave /> */}
-        <LoginForm/>
-      </ThemedView>
-{/*       <TestComp/> */}
-    </ParallaxScrollView>
+      <ThemedText type="title" style={[styles.titleText, { backgroundColor: 'transparent' }]}>
+        Welcome to my 100%
+      </ThemedText>
+      <ThemedText type="title" style={[styles.titleText, { backgroundColor: 'transparent' }]}>
+        fixed homepage!
+      </ThemedText>
+      <HelloWave />
+    </ThemedView>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   titleContainer: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
-    gap: 8,
+    justifyContent: 'center',
+    paddingHorizontal: 16,
+    backgroundColor: 'transparent', 
+  },
+  titleText: {
+    textAlign: 'center',
+    fontSize: 24, 
+    flexWrap: 'wrap',
+    backgroundColor: 'transparent', // Ta bort bakgrunden
   },
   stepContainer: {
     gap: 8,
@@ -46,5 +56,12 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     position: 'absolute',
+  },
+  background: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
