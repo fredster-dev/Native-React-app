@@ -10,12 +10,12 @@ export default function CongratsScreen() {
       <Text style={styles.message}>Du är nu inloggad 🎉</Text>
       <Button 
         title="Gå till startsidan"
-        onPress={() => router.push('/')} // Navigera till startsidan
+        onPress={() => router.push('/')} 
       />
       <Button 
         title="Gå till profilsidan"
-        onPress={() => router.push('/profil')} // Navigera till profilsidan
-        color="yellow" // Grön färg för knappen
+        onPress={() => router.push('/profil')} 
+        color="yellow" 
       />
     </View>
   );
