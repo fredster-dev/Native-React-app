@@ -7,6 +7,8 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import TestComp from '@/components/Testcomp';
 import LoginForm from '@/components/LoginForm';
+import LinearGradient from 'react-native-linear-gradient';
+import { Text } from 'react-native';
 
 
 
@@ -18,18 +20,31 @@ export default function HomeScreen() {
       resizeMode="cover"
     >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome to my 100% fixed homepage!</ThemedText>
-        <HelloWave />
-      </ThemedView>
+      <ThemedText type="title" style={[styles.titleText, { backgroundColor: 'transparent' }]}>
+        Welcome to my 100%
+      </ThemedText>
+      <ThemedText type="title" style={[styles.titleText, { backgroundColor: 'transparent' }]}>
+        fixed homepage!
+      </ThemedText>
+      <HelloWave />
+    </ThemedView>
     </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   titleContainer: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
-    gap: 8,
+    justifyContent: 'center',
+    paddingHorizontal: 16,
+    backgroundColor: 'transparent', 
+  },
+  titleText: {
+    textAlign: 'center',
+    fontSize: 24, 
+    flexWrap: 'wrap',
+    backgroundColor: 'transparent', // Ta bort bakgrunden
   },
   stepContainer: {
     gap: 8,

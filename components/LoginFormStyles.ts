@@ -4,67 +4,72 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        padding: 20,
-        backgroundColor: 'white',
+        justifyContent: 'flex-start', // Flytta allt till toppen
+        alignItems: 'flex-end', // Placera allt till höger
+        padding: 50, // Överdrivet mycket padding
+        backgroundColor: '#ff69b4', // Skärande rosa bakgrund
     },
     title: {
-        fontSize: 24,
+        fontSize: 12, // För liten text
         fontWeight: 'bold',
-        marginBottom: 20,
+        marginBottom: 5, // Nästan ingen marginal
+        color: '#00ff00', // Grön text på rosa bakgrund
+        textAlign: 'right', // Texten är högerjusterad
     },
     label: {
-        marginTop: 10,
+        marginTop: 20,
         marginBottom: 5,
-        fontSize: 16,
+        fontSize: 10, // Väldigt liten text
         fontWeight: '600',
-        alignSelf: 'flex-start',
+        color: '#ff0000', // Röd text
+        alignSelf: 'flex-end', // Placera texten till höger
     },
     regtext: {
-        fontSize: 16,
-        color: '#367cf5',
-        fontWeight: '600',
+        fontSize: 20, // För stor text
+        color: '#0000ff', // Blå text
+        fontWeight: '900', // För tung text
     },
     regtextLabel: {
-        fontSize: 16,
-        fontWeight: '600',
-        color: '#000',
-        marginRight: 5,
+        fontSize: 8, // Nästan oläslig text
+        fontWeight: '300', // Väldigt tunn text
+        color: '#ffff00', // Gul text
+        marginRight: 20, // Onödigt mycket marginal
     },
     regtextContainer: {
         flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 15,
+        justifyContent: 'space-between', // Sprid ut allt
+        alignItems: 'flex-start', // Placera allt högst upp
+        marginTop: 50, // Onödigt mycket marginal
     },
     input: {
-        width: '100%',
-        padding: 10,
-        borderColor: '#ccc',
-        borderWidth: 1,
-        borderRadius: 5,
-        marginBottom: 10,
+        width: '50%', // För smalt inputfält
+        padding: 5, // För lite padding
+        borderColor: '#000', // Svart kant
+        borderWidth: 3, // För tjock kant
+        borderRadius: 0, // Ingen rundning
+        marginBottom: 20, // För mycket marginal
+        backgroundColor: '#ffffe0', // Ljusgul bakgrund
+        color: '#ff00ff', // Svår textfärg
     },
     button: {
-        backgroundColor: '#1a77db',
-        padding: 15,
-        borderRadius: 5,
+        backgroundColor: '#000', // Svart bakgrund
+        padding: 5, // För liten knapp
+        borderRadius: 50, // Överdrivet rundad knapp
         alignItems: 'center',
-        width: '100%',
-        height: 50,
+        width: '30%', // För liten bredd
+        height: 30, // För låg höjd
     },
     buttonText: {
-        color: '#fff',
-        fontSize: 16,
-        fontWeight: '600',
+        color: '#ff0000', // Röd text
+        fontSize: 8, // Väldigt liten text
+        fontWeight: '900', // För tung text
     },
     errorText: {
-        color: 'red',
-        fontSize: 14,
-        marginBottom: 10,
-        textAlign: 'center',
+        color: '#00ffff', // Cyan text
+        fontSize: 20, // För stor text
+        marginBottom: 50, // För mycket marginal
+        textAlign: 'left', // Felplacerad text
     },
-
 });
 
 export default styles;

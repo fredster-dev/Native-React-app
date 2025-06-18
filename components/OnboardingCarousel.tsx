@@ -18,7 +18,6 @@ type CarouselItem = {
   image: any;
 };
 
-// 🛠 Använd relativ path istället för "@/..." för säker laddning
 const data: CarouselItem[] = [
   {
     title: 'Välkommen!',
