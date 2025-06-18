@@ -15,8 +15,7 @@ import * as Animatable from 'react-native-animatable';
 import { Image } from 'react-native';
 import { useRouter } from 'expo-router';
 
-const { width, height } = Dimensions.get('window'); // För att få skärmens dimensioner
-
+const { width, height } = Dimensions.get('window'); 
 const LoginForm = () => {
   const router = useRouter();
   const [email, setEmail] = useState<string>('');
@@ -34,7 +33,7 @@ const LoginForm = () => {
     try {
       if (isLogin) {
         await signInWithEmailAndPassword(auth, email, password);
-        router.push('/congrats'); // Navigera till "Grattis"-sidan
+        router.push('/congrats'); 
       } else {
         await createUserWithEmailAndPassword(auth, email, password);
         alert('Konto skapat! Du kan nu logga in.');
@@ -93,7 +92,7 @@ const LoginForm = () => {
 
       {error.length > 0 && <Text style={styles.errorText}>{error}</Text>}
 
-      {/* Pingvin-knappen */}
+      {/* Pingvinen */}
       <Animatable.View
           animation={{
             0: { translateX: -width / 2 },
@@ -102,7 +101,7 @@ const LoginForm = () => {
           }}
           iterationCount="infinite"
           direction="alternate"
-          duration={5000} // Gör rörelsen långsammare (5 sekunder per cykel)
+          duration={5000} 
           style={{ position: 'absolute', top: 100, alignSelf: 'center' }}
         >
           <TouchableOpacity onPress={handleSubmit}>
