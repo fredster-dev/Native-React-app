@@ -1,21 +1,12 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet, ImageBackground } from 'react-native';
-
+import { StyleSheet, ImageBackground } from 'react-native';
 import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import TestComp from '@/components/Testcomp';
-import LoginForm from '@/components/LoginForm';
-import LinearGradient from 'react-native-linear-gradient';
-import { Text } from 'react-native';
 
-
-
-export default function HomeScreen() {
+const HomeScreen = () => {
   return (
     <ImageBackground
-      source={require('../../assets/images/back.jpg')} // Byt ut till din egen bild
+      source={require('../../assets/images/back.jpg')} 
       style={styles.background}
       resizeMode="cover"
     >
@@ -32,6 +23,8 @@ export default function HomeScreen() {
   );
 }
 
+export default HomeScreen;
+
 const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'column',
@@ -44,7 +37,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 24, 
     flexWrap: 'wrap',
-    backgroundColor: 'transparent', // Ta bort bakgrunden
+    backgroundColor: 'transparent', 
   },
   stepContainer: {
     gap: 8,
