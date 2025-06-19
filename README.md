@@ -1,14 +1,14 @@
 # Inlämning – Native React App
 
-Detta är min inlämning för uppgiften i kursen XX1234 på [din skola här].
+Detta är min inlämning för uppgiften **Mission: (Usage) Impossible** i kursen **React** 
 
-Jag har byggt en React Native-app med Expo, Firebase och TailwindCSS.  
-Inlämningen innehåller routing, auth, komponenter och styling.
+Syftet var att skapa ett registrerings- och inloggningsflöde med **medvetet dålig användarupplevelse**, enligt uppgiftens instruktioner.  
+Trots UX-katastrofen är appen fullt fungerande, byggd i React Native med Expo och Firebase.
+
 
 ## Starta projektet lokalt
 
 1. Klona repot:
-
    ```bash
    git clone https://github.com/fredster-dev/Native-React-app
    cd Native-React-app
@@ -17,10 +17,10 @@ Inlämningen innehåller routing, auth, komponenter och styling.
    npm install
 
 3. Starta appen i Expo:
-npx expo start
+   npx expo start
 
-🔧 Förutsätter att du har Node.js och Expo CLI installerat
-📱 Testa gärna med Expo Go-appen eller emulator
+Förutsätter att du har Node.js och Expo CLI installerat
+Testa gärna med Expo Go-appen eller emulator!!
 
 # Welcome to your Expo app 👋
 
