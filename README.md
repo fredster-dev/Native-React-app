@@ -1,3 +1,27 @@
+# Inlämning – Native React App
+
+Detta är min inlämning för uppgiften i kursen XX1234 på [din skola här].
+
+Jag har byggt en React Native-app med Expo, Firebase och TailwindCSS.  
+Inlämningen innehåller routing, auth, komponenter och styling.
+
+## Starta projektet lokalt
+
+1. Klona repot:
+
+   ```bash
+   git clone https://github.com/fredster-dev/Native-React-app
+   cd Native-React-app
+
+2. Installera beroenden:
+   npm install
+
+3. Starta appen i Expo:
+npx expo start
+
+🔧 Förutsätter att du har Node.js och Expo CLI installerat
+📱 Testa gärna med Expo Go-appen eller emulator
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
